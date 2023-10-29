@@ -7,5 +7,10 @@ services:
       - "4200:4200"
     volumes:
       - "./front/reservation-app:/var/www/reservation-app"
-# api
+  api:
+    build: ./back
+    ports:
+      - "3001:3001"
+#    volumes:
+#      - "./back/reservation-app:/var/www/reservation-app"
 # db
