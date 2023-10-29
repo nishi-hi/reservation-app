@@ -1,16 +1,15 @@
 version: '3'
 
 services:
-  web:
+  front:
     build: ./front
     ports:
       - "4200:4200"
     volumes:
-      - "./front/reservation-app:/var/www/reservation-app"
-  api:
+      - "./front/reservation-app:/reservation-app-front"
+  back:
     build: ./back
     ports:
       - "3001:3001"
-#    volumes:
-#      - "./back/reservation-app:/var/www/reservation-app"
-# db
+    volumes:
+      - "./back/reservation-app:/reservation-app-back"

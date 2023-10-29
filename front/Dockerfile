@@ -2,7 +2,7 @@ FROM node:latest
 
 EXPOSE 4200
 
-WORKDIR /var/www/reservation-app
+WORKDIR /reservation-app-front
 
 RUN npm update -g npm && \
   npm install -g n && \
