@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: ./front
+    ports:
+      - "4200:4200"
+    volumes:
+      - "./front/reservation-app:/var/www/reservation-app"
+# api
+# db
