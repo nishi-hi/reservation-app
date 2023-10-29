@@ -5,11 +5,24 @@ services:
     build: ./front
     ports:
       - "4200:4200"
-    volumes:
-      - "./front/reservation-app:/reservation-app-front"
+    networks:
+      default:
+        aliases:
+          - front
+    tty: true
   back:
     build: ./back
     ports:
       - "3001:3001"
-    volumes:
-      - "./back/reservation-app:/reservation-app-back"
+    networks:
+      default:
+        aliases:
+          - back
+    tty: true
+  ubuntu:
+    image: ubuntu:latest
+    networks:
+      default:
+        aliases:
+          - ubuntu
+    tty: true
