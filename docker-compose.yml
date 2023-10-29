@@ -19,10 +19,3 @@ services:
         aliases:
           - back
     tty: true
-  ubuntu:
-    image: ubuntu:latest
-    networks:
-      default:
-        aliases:
-          - ubuntu
-    tty: true
